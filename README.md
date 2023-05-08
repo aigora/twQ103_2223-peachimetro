@@ -4,15 +4,15 @@ Realización de un programa para conocer o consultar el pH de las fuentes de dis
 
 ## Integrantes del equipo
 
-Silvia Alfageme Aguado Q-103 
+Silvia Alfageme Aguado Q-103 (usuario: )
 
 Miguel Águeda Leal Q-103 (usuario: miguelagueda1)
 
-Federico García Laorga Q-103
+Federico García Laorga Q-103 (usuario: )
 
-Claudia Gómez Syudila Q-103
+Claudia Gómez Siudyla Q-103 (usuario: )
 
-Fadua Jaber Zekri Q-103
+Fadua Jaber Zekri Q-103 (usuario: )
 
 ## Objetivos del trabajo
 
