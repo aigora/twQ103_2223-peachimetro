@@ -1,10 +1,14 @@
-# [Título del trabajo]
+# Peachímetro
 
-[Descripción breve del proyecto a realizar (2-3 frases).]
+Realización de un programa para conocer o consultar el pH de las fuentes de distintos barrios de Madrid y ordenar posteriormente según las preferencias del usuario 
 
 ## Integrantes del equipo
 
-[Nombres, apellidos, y usuario GitHub de los integrantes del equipo.]
+Silvia Alfageme Aguado
+Miguel Águeda Leal
+Federico García Laorga
+Claudia Gómez Syudila
+Fadua Jaber Zekri
 
 ## Objetivos del trabajo
 
