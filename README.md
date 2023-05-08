@@ -4,12 +4,12 @@ Realización de un programa para conocer o consultar el pH de las fuentes de dis
 
 ## Integrantes del equipo
 
-Silvia Alfageme Aguado
-Miguel Águeda Leal
-Federico García Laorga
-Claudia Gómez Syudila
-Fadua Jaber Zekri
+Silvia Alfageme Aguado Q-103 
+Miguel Águeda Leal Q-103 (usuario: miguelagueda1)
+Federico García Laorga Q-103
+Claudia Gómez Syudila Q-103
+Fadua Jaber Zekri Q-103
 
 ## Objetivos del trabajo
 
-[Lista de los objetivos que se persiguen con el trabajo propuesto.]
+El objetivo es desarrollar un código que permita consultar las fuentes de los algunos distritos de madrid, y características. Se busca también ordenar las fuentes en función de varias variables, como pH, conductividad y turbidez.
