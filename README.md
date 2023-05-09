@@ -6,11 +6,11 @@ Realización de un programa para conocer o consultar el pH de las fuentes de dis
 
 Silvia Alfageme Aguado Q-103 (usuario: )
 
-Miguel Águeda Leal Q-103 (usuario: miguelagueda1)
+Miguel Águeda Leal Q-103 (Usuario: miguelagueda1)
 
 Federico García Laorga Q-103 (usuario: )
 
-Claudia Gómez Siudyla Q-103 (usuario: claugmz)
+Claudia Gómez Siudyla Q-103 (Usuario: claugmz)
 
 Fadua Jaber Zekri Q-103 (usuario: FaduaJaber)
 
