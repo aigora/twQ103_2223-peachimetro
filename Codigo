@@ -40,30 +40,41 @@ int main(){
 
 		switch(seleccion){
 			case 1:
-				cargar
-				break:
+				cargar();
+				break;
 			case 2:
-				break:
+				break;
 			case 3:
-				break:
+				break;
 			case 4:
-				break:
+				break;
 			case 5:
-				break:
+				break;
 			case 6:
-				break:
+				break;
 			case 7:
-				break:
+				break;
 			case 8:
-				break:
+				break;
 			case 9:
-				break:
+				break;
 			case 10:
-				break:
+				break;
 			
 		}
 }
 void cargar(){
 	FILE *f;
-		f=fopen("")
+		f=fopen("202301_Lavapies.txt","rb");
+		if(f==NULL){
+			exit(1);
+		}
+	nfuentes fuentes;
+		fread(&fuentes,sizeof(nfuentes),1,f);
+			while(!feof(f)){
+				printf("%s %.2f  %.2f  %.2f  %.2f",fuentes.fuent,fuentes.pH,fuentes.cond,fuentes.turb,fuentes.col);
+				fread(&fuentes,sizeof(nfuentes),1,f);
+	}	
+	fclose(f);
+
 }
