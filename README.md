@@ -12,7 +12,7 @@ Federico García Laorga Q-103 (usuario: )
 
 Claudia Gómez Siudyla Q-103 (usuario: claugmz)
 
-Fadua Jaber Zekri Q-103 (usuario: )
+Fadua Jaber Zekri Q-103 (usuario: FaduaJaber)
 
 ## Objetivos del trabajo
 
