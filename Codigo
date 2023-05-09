@@ -2,13 +2,14 @@
 #include<math.h>
 #include<string.h>
 
-struct fuente{
-	char fuent[100];
+typedef struct{
+	int fuent;
 	float pH;
 	float turb;
 	float cond;
 	float col;
-};
+}fuentes;
+void cargar();
 float funcionMedia();
 float ordenarpH();
 float ordenarturb();
@@ -19,44 +20,50 @@ int main(){
 		
 		do{
 		printf("\nIntroduce que funcion desea realizar: ");
-			printf("\n1)Introducir una nueva fuente.");
-			printf("\n2)Editar una fuente ya existente.");
-			printf("\n3)Ordenar las fuentes segun su pH.");
-			printf("\n4)Ordenar las fuentes segun su conductividad.");
-			printf("\n5)Ordenar las fuentes segun su turbidez.");
-			printf("\n6)Ordenar las fuentes segun sus coliformes.");
-			printf("\n7)Mostrar datos de una fuente existentes");
-			printf("\n8)Hallar la media de los datos de las fuentes.");
-			printf("\n9)Comparar datos de 2 fuentes duferentes.");
-			printf("\n10)Cerrar programa.\n");
+			printf("\n1)Consultar fuentes existentes.");
+			printf("\n2)Introducir una nueva fuente.");
+			printf("\n3)Editar una fuente ya existente.");
+			printf("\n4)Ordenar las fuentes segun su pH.");
+			printf("\n5)Ordenar las fuentes segun su conductividad.");
+			printf("\n6)Ordenar las fuentes segun su turbidez.");
+			printf("\n7)Ordenar las fuentes segun sus coliformes.");
+			printf("\n8)Mostrar datos de una fuente existentes");
+			printf("\n9)Hallar la media de los datos de las fuentes.");
+			printf("\n10)Comparar datos de 2 fuentes duferentes.");
+			printf("\n11)Cerrar programa.\n");
 				fflush(stdin);
 					scanf("%d",&seleccion);
-				if(seleccion==0){
+				if(seleccion==11){
 					return 0;
 				}
-}while(seleccion<1 || seleccion>10);
-			
-			switch(seleccion){
-				case 1:
-					
-					break;
-				case 2:
-					break;
-					ordenarpH();
-				case 3:
-					break;
-				case 4:
-					break;
-				case 5:
-					break;
-				case 6:
-					break;
-				case 7:
-					break;
-				case 8:
-					break;
-				case 9:
-					break;			
-			}
+}while(seleccion<1 || seleccion>11);
 
+		switch(seleccion){
+			case 1:
+				cargar
+				break:
+			case 2:
+				break:
+			case 3:
+				break:
+			case 4:
+				break:
+			case 5:
+				break:
+			case 6:
+				break:
+			case 7:
+				break:
+			case 8:
+				break:
+			case 9:
+				break:
+			case 10:
+				break:
+			
+		}
+}
+void cargar(){
+	FILE *f;
+		f=fopen("")
 }
