@@ -1,0 +1,62 @@
+#include<stdio.h>
+#include<math.h>
+#include<string.h>
+
+struct fuente{
+	char fuent[100];
+	float pH;
+	float turb;
+	float cond;
+	float col;
+};
+float funcionMedia();
+float ordenarpH();
+float ordenarturb();
+float ordenarcond();
+float ordenarcol();
+int main(){
+	int seleccion;
+		
+		do{
+		printf("\nIntroduce que funcion desea realizar: ");
+			printf("\n1)Introducir una nueva fuente.");
+			printf("\n2)Editar una fuente ya existente.");
+			printf("\n3)Ordenar las fuentes segun su pH.");
+			printf("\n4)Ordenar las fuentes segun su conductividad.");
+			printf("\n5)Ordenar las fuentes segun su turbidez.");
+			printf("\n6)Ordenar las fuentes segun sus coliformes.");
+			printf("\n7)Mostrar datos de una fuente existentes");
+			printf("\n8)Hallar la media de los datos de las fuentes.");
+			printf("\n9)Comparar datos de 2 fuentes duferentes.");
+			printf("\n10)Cerrar programa.\n");
+				fflush(stdin);
+					scanf("%d",&seleccion);
+				if(seleccion==0){
+					return 0;
+				}
+}while(seleccion<1 || seleccion>10);
+			
+			switch(seleccion){
+				case 1:
+					
+					break;
+				case 2:
+					break;
+					ordenarpH();
+				case 3:
+					break;
+				case 4:
+					break;
+				case 5:
+					break;
+				case 6:
+					break;
+				case 7:
+					break;
+				case 8:
+					break;
+				case 9:
+					break;			
+			}
+
+}
