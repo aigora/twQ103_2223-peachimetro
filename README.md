@@ -10,7 +10,7 @@ Miguel Águeda Leal Q-103 (usuario: miguelagueda1)
 
 Federico García Laorga Q-103 (usuario: )
 
-Claudia Gómez Siudyla Q-103 (usuario: )
+Claudia Gómez Siudyla Q-103 (usuario: claugmz)
 
 Fadua Jaber Zekri Q-103 (usuario: )
 
