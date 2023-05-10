@@ -1,0 +1,96 @@
+#include <stdio.h>
+#include <string.h>
+
+struct TBarrio {
+    char parametros[200];
+    float ph;
+    int conductividad;
+    int coliformes;
+    int turbidez;
+};
+
+
+int main () {
+    	
+	int estadisticas, media, maximo, minimo;
+	float media1, media2, media3, media4, maximo1, maximo2, maximo3, maximo4, minimo1, minimo2, minimo3, minimo4;
+	 
+
+	printf("Que estadistica quieres calcular?:\n1 - Calcular media\n2 - Calcular maximo\n3 - Calcular minimo\n");
+	scanf("%d", &estadisticas);
+
+
+	switch(estadisticas){ //hacer estadisticas 
+		
+		case 1:
+			printf("De que parametro quiere hacer la media?\n1 - pH\n2 - Conductividad\n3 -  Coliformes\n4  - Turbidez\n");
+			
+			scanf("%d",&media);
+			
+			switch(media){
+				
+				case 1:
+					printf("pH (media) = %d", media1);
+					break;
+				case 2:
+					printf("Conductividad (media) = %d", media2);
+					break;
+				case 3:
+					printf("Turbidez (media) = %d", media3);
+					break;
+				case 4:
+					printf("Coliformes (media) = %d", media4);
+					break;
+			}
+			
+			break;
+			
+		case 2:
+			printf("De que parametro quiere encontrar el maximo?\n1 - pH\n2 - Conductividad\n3 - Coliformes\n4  - Turbidez\n");
+
+			scanf("%d",&maximo);
+			
+			switch(maximo){
+				
+				case 1:
+					printf("pH (maximo) = %d", maximo1);
+					break;
+				case 2:
+					printf("Conductividad (maximo) = %d", maximo2);
+					break;
+				case 3:
+					printf("Turbidez (maximo) = %d", maximo3);
+					break;
+				case 4:
+					printf("Coliformes (maximo) = %d", maximo4);
+					break;
+			}
+			
+			break;
+			
+		case 3:
+			printf("De que parametro quiere conocer el minimo?\n1 - pH\n2 - Conductividad\n3 - Coliformes\n4  - Turbidez\n");
+			
+			scanf("%d",&minimo);
+			
+			switch(minimo){
+				
+				case 1:
+					printf("pH (minimo) = %d", minimo1);
+					break;
+				case 2:
+					printf("Conductividad (minimo) = %d", minimo2);
+					break;
+				case 3:
+					printf("Turbidez (minimo) = %d", minimo3);
+					break;
+				case 4:
+					printf("Coliformes (minimo) = %d", minimo4);
+					break;
+			}
+			
+			break;
+		
+	}	
+	
+}
