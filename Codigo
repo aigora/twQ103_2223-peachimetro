@@ -22,14 +22,14 @@ int main(){
 		printf("\nIntroduce que funcion desea realizar: ");
 			printf("\n1)Consultar fuentes existentes.");
 			printf("\n2)Introducir una nueva fuente.");
-			printf("\n3)Editar una fuente ya existente.");
+			printf("\n3)Editar una fuente existente.");
 			printf("\n4)Ordenar las fuentes segun su pH.");
 			printf("\n5)Ordenar las fuentes segun su conductividad.");
 			printf("\n6)Ordenar las fuentes segun su turbidez.");
 			printf("\n7)Ordenar las fuentes segun sus coliformes.");
 			printf("\n8)Mostrar datos de una fuente existentes");
 			printf("\n9)Hallar la media de los datos de las fuentes.");
-			printf("\n10)Comparar datos de 2 fuentes duferentes.");
+			printf("\n10)Comparar datos de 2 fuentes diferentes.");
 			printf("\n11)Cerrar programa.\n");
 				fflush(stdin);
 					scanf("%d",&seleccion);
