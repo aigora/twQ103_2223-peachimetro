@@ -1,22 +1,23 @@
 #include <stdio.h>
-#include <string.h>
+#include <math.h>	
+#define TAM_MAX 200
 
-struct TBarrio {
-    char parametros[200];
-    float ph;
-    int conductividad;
-    int coliformes;
-    int turbidez;
+struct TBarrio{
+	char parametros[200];	
+	float ph;
+	int conductividad;
+	int coliformes;
+	int turbidez;
 };
 
 
 int main () {
     	
-	int estadisticas, media, maximo, minimo;
+	int estadisticas, media, maximo, minimo, nombreNuevoFichero, numeroFuentes;
 	float media1, media2, media3, media4, maximo1, maximo2, maximo3, maximo4, minimo1, minimo2, minimo3, minimo4;
 	 
 
-	printf("Que estadistica quieres calcular?:\n1 - Calcular media\n2 - Calcular maximo\n3 - Calcular minimo\n");
+	printf("Bienvenido a Peachimetro. Indique lo que desea realizar con el programa:\n1 - Calcular media\n2 - Calcular maximo\n3 - Calcular minimo\n4 - Guardar datos nuevos\n");
 	scanf("%d", &estadisticas);
 
 
@@ -90,7 +91,20 @@ int main () {
 			}
 			
 			break;
+			
+		case 4:
+			printf("Intoduzca el nombre del fichero con el que vaya a guardar los datos nuevos:\n");
+			
+			scanf("%s", &nombreNuevoFichero);
+			
+			printf("Indique el numero de fuentes que quiere introducir:\n");
+			
+			scanf("%d", &numeroFuentes);
+			
+			printf("\nRecuerde! valores permitidos por la comunidad de Madrid:\n ph: entre 7'2 y 7'6\n Conductividad: 50-500 mmhos/cm. Algunas hasta 1500\n Turbidez: Maximo un valor de 5 NTU. Lo mas ideal es que sea 1 NTU\n Coliformes: Entre 0 y 1 UFC /100mL\n");
+			
 		
 	}	
 	
 }
+
