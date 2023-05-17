@@ -2,18 +2,30 @@
 #include <math.h>	
 #define TAM_MAX 200
 
+void ImprimirBanner () {
+	
+    printf("*******  *******    ***    ******* *     *  ******* *       * ******* ******* *******  *******   \n");
+    printf("*     *  *        *     *  *       *     *     *    * *   * * *          *    *     *  *     *   \n");
+    printf("*******  *******  *     *  *       *******     *    *  ***  * *******    *    *******  *     *   \n");
+    printf("*        *        *******  *       *     *     *    *       * *          *    * ***    *     *   \n");
+    printf("*        *******  *     *  ******* *     *  ******* *       * *******    *    *    **  *******   \n");
+    
+	}
+    
 struct TBarrio{
-	char parametros[200];	
+	char parametros[300];	
 	float ph;
 	int conductividad;
 	int coliformes;
 	int turbidez;
 };
 
+/*void ficheroNuevoIntroducido(struct TBarrio parametros[], int a, char parametros);*/
+
 
 int main () {
     	
-	int estadisticas, media, maximo, minimo, nombreNuevoFichero, numeroFuentes;
+	int estadisticas, media, maximo, minimo, nombreNuevoFichero, numeroFuentes, a, b, Eph, Econductividad, Ecoliformes, Eturbidez;
 	float media1, media2, media3, media4, maximo1, maximo2, maximo3, maximo4, minimo1, minimo2, minimo3, minimo4;
 	 
 
@@ -21,7 +33,7 @@ int main () {
 	scanf("%d", &estadisticas);
 
 
-	switch(estadisticas){ //hacer estadisticas 
+	switch(estadisticas){ //hacer la media
 		
 		case 1:
 			printf("De que parametro quiere hacer la media?\n1 - pH\n2 - Conductividad\n3 -  Coliformes\n4  - Turbidez\n");
@@ -70,6 +82,24 @@ int main () {
 			break;
 			
 		case 3:
+			
+			/*float valorminimopH(FILE*fentrada) {
+				int n, m;
+				float pHMinimo=14;
+				struct TBarrio parametros [TAM_MAX];
+				char nombreFichero [300];
+				
+				printf("Introduce el nombre del fichero que contiene los datos\n");
+				scanf("%s",nombreFichero);
+				fentrada = fopen(nombreFichero,"r"); // leyendo	
+	
+    		if (fentrada == NULL) {
+	    		printf("Error, no puede abrir el fichero.\n");
+	    		return 0;
+				}
+			
+			}*/
+			
 			printf("De que parametro quiere conocer el minimo?\n1 - pH\n2 - Conductividad\n3 - Coliformes\n4  - Turbidez\n");
 			
 			scanf("%d",&minimo);
@@ -93,18 +123,45 @@ int main () {
 			break;
 			
 		case 4:
-			printf("Intoduzca el nombre del fichero con el que vaya a guardar los datos nuevos:\n");
 			
-			scanf("%s", &nombreNuevoFichero);
+			/*void ficheroNuevoIntroducido(struct TBarrio parametros[], int a, char parametros) {
+				
+				int i, a=5;
+				
+				int encontrado = 0;*/
+				
+				a=5;
+				
+				printf("Intoduzca el nombre del fichero con el que vaya a guardar los datos nuevos:\n");
 			
-			printf("Indique el numero de fuentes que quiere introducir:\n");
+				scanf("%s", &nombreNuevoFichero);
+				
+				
+				
+				printf("Indique el numero de fuentes que quiere introducir (maximo 3 fuentes):\n");
 			
-			scanf("%d", &numeroFuentes);
+				scanf("%d", &numeroFuentes);
+				
+				/* for (numeroFuentes=0; numeroFuentes<a; numeroFuentes++) {
+					if (numeroFuentes == 0) {
+						printf("El numero de fuentes debe ser 3 como máximo y al meno");
+					} else (numeroFuentes == 1); {
+						return numeroFuentes;
+					}
+				}*/
+				
+				printf("\nRecuerde! valores permitidos por la comunidad de Madrid:\n ph: entre 7'2 y 7'6\n Conductividad: 50-500 mmhos/cm. Algunas hasta 1500\n Turbidez: Maximo un valor de 5 NTU. Lo mas ideal es que sea 1 NTU\n Coliformes: Entre 0 y 1 UFC /100mL\n");
+				printf("\n");
+				printf("Escriba los datos de la nueva fuente introducida: pH,conductividad, coliformes y turbidez:\n");
+				scanf("ph = %d \n", &Eph);
+				scanf("Conductividad = %d \n", &Econductividad);
+				scanf("Coliformes = %d \n", &Ecoliformes);
+				scanf("Turbidez = %d \n", &Eturbidez);
 			
-			printf("\nRecuerde! valores permitidos por la comunidad de Madrid:\n ph: entre 7'2 y 7'6\n Conductividad: 50-500 mmhos/cm. Algunas hasta 1500\n Turbidez: Maximo un valor de 5 NTU. Lo mas ideal es que sea 1 NTU\n Coliformes: Entre 0 y 1 UFC /100mL\n");
+				/*scanf("%f %d %d %d",&parametros[i]., &parametros[i].conductividad, &parametros[i].turbidez, &parametros[i].coliformes);
 			
-		
+		}*/
 	}	
-	
+		
 }
 
