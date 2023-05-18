@@ -4,12 +4,13 @@
 
 void ImprimirBanner () {
 	
+	
+	
     printf("*******  *******    ***    ******* *     *  ******* *       * ******* ******* *******  *******   \n");
     printf("*     *  *        *     *  *       *     *     *    * *   * * *          *    *     *  *     *   \n");
     printf("*******  *******  *     *  *       *******     *    *  ***  * *******    *    *******  *     *   \n");
     printf("*        *        *******  *       *     *     *    *       * *          *    * ***    *     *   \n");
     printf("*        *******  *     *  ******* *     *  ******* *       * *******    *    *    **  *******   \n");
-    
 	}
     
 struct TBarrio{
@@ -19,8 +20,6 @@ struct TBarrio{
 	int coliformes;
 	int turbidez;
 };
-
-/*void ficheroNuevoIntroducido(struct TBarrio parametros[], int a, char parametros);*/
 
 
 int main () {
@@ -59,6 +58,23 @@ int main () {
 			break;
 			
 		case 2:
+			
+			/*float valormaximopH(FILE*fentrada) {
+				int n, m;
+				float pHMaximo=14;
+				struct TBarrio parametros [TAM_MAX];
+				char nombreFichero [300];
+				
+				printf("Introduce el nombre del fichero que contiene los datos\n");
+				scanf("%s",nombreFichero);
+				fentrada = fopen(nombreFichero,"r"); // leyendo	
+	
+    		if (fentrada == NULL) {
+	    		printf("Error, no puede abrir el fichero.\n");
+	    		return 0;
+				}
+			
+			}*/
 			printf("De que parametro quiere encontrar el maximo?\n1 - pH\n2 - Conductividad\n3 - Coliformes\n4  - Turbidez\n");
 
 			scanf("%d",&maximo);
