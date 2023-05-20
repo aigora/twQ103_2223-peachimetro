@@ -31,7 +31,7 @@ int main () {
 
 	do{
     printf("Bienvenido a Peachimetro. Indique lo que desea realizar con el programa:\n1 - Calcular media\n2 - Calcular maximo\n3 - Calcular minimo\n4 - Guardar datos nuevos\n");
-    scanf("%d", &estadisticas);
+    scanf("%i", &estadisticas);
     }while (estadisticas<1 || estadisticas>4);
 
 
@@ -41,7 +41,7 @@ int main () {
 			do{
             printf("De que parametro quiere hacer la media?\n1 - pH\n2 - Conductividad\n3 -  Coliformes\n4  - Turbidez\n");
             
-            scanf("%d",&media);
+            scanf("%i",&media);
             }while(media<1||media>4);
 			
 			switch(media){
@@ -64,9 +64,19 @@ int main () {
 					printf("Conductividad (media) = %d", media2);
 					break;
 				case 3:
+				turbidez = fopen("valores turbidez.txt", "r")
+				if (turbidez == NULL){
+                        printf("No se ha podido abrir el fichero.");
+                        exit(1);
+                    }
 					printf("Turbidez (media) = %d", media3);
 					break;
 				case 4:
+				coliformes = fopen("valores coliformes.txt", "r")
+				if (coliformes == NULL){
+                        printf("No se ha podido abrir el fichero.");
+                        exit(1);
+                    }
 					printf("Coliformes (media) = %d", media4);
 					break;
 			}
