@@ -101,9 +101,11 @@ int main () {
 				}
 			
 			}*/
+			do{
 			printf("De que parametro quiere encontrar el maximo?\n1 - pH\n2 - Conductividad\n3 - Coliformes\n4  - Turbidez\n");
 
-			scanf("%d",&maximo);
+			scanf("%i",&maximo);
+			} while (maximo<1||maximo>4);
 			
 			switch(maximo){
 				
