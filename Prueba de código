@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <math.h>	
 #define TAM_MAX 200
 
@@ -13,38 +14,53 @@ void ImprimirBanner () {
     printf("*        *******  *     *  ******* *     *  ******* *       * *******    *    *    **  *******   \n");
 	}
     
-struct TBarrio{
+typedef struct{
 	char parametros[300];	
 	float ph;
 	int conductividad;
 	int coliformes;
 	int turbidez;
-};
+}TBarrio;
 
 
 int main () {
     	
 	int estadisticas, media, maximo, minimo, nombreNuevoFichero, numeroFuentes, a, b, Eph, Econductividad, Ecoliformes, Eturbidez;
 	float media1, media2, media3, media4, maximo1, maximo2, maximo3, maximo4, minimo1, minimo2, minimo3, minimo4;
-	 
+	FILE *ph,*conductividad,*turbidez,*coliformes;
 
-	printf("Bienvenido a Peachimetro. Indique lo que desea realizar con el programa:\n1 - Calcular media\n2 - Calcular maximo\n3 - Calcular minimo\n4 - Guardar datos nuevos\n");
-	scanf("%d", &estadisticas);
+	do{
+    printf("Bienvenido a Peachimetro. Indique lo que desea realizar con el programa:\n1 - Calcular media\n2 - Calcular maximo\n3 - Calcular minimo\n4 - Guardar datos nuevos\n");
+    scanf("%d", &estadisticas);
+    }while (estadisticas<1 || estadisticas>4);
 
 
 	switch(estadisticas){ //hacer la media
 		
 		case 1:
-			printf("De que parametro quiere hacer la media?\n1 - pH\n2 - Conductividad\n3 -  Coliformes\n4  - Turbidez\n");
-			
-			scanf("%d",&media);
+			do{
+            printf("De que parametro quiere hacer la media?\n1 - pH\n2 - Conductividad\n3 -  Coliformes\n4  - Turbidez\n");
+            
+            scanf("%d",&media);
+            }while(media<1||media>4);
 			
 			switch(media){
 				
 				case 1:
+				ph = fopen("valores ph.txt", "r");
+				if (ph == NULL){
+                        printf("No se ha podido abrir el fichero.");
+                        exit(1);
+                    }
 					printf("pH (media) = %d", media1);
 					break;
 				case 2:
+				conductividad = fopen("valores conductividad.txt", "r")
+				if (conductividad == NULL){
+                        printf("No se ha podido abrir el fichero.");
+                        exit(1);
+                    }
+				
 					printf("Conductividad (media) = %d", media2);
 					break;
 				case 3:
