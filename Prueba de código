@@ -143,10 +143,11 @@ int main () {
 				}
 			
 			}*/
-			
+			do{
 			printf("De que parametro quiere conocer el minimo?\n1 - pH\n2 - Conductividad\n3 - Coliformes\n4  - Turbidez\n");
 			
 			scanf("%d",&minimo);
+			} while (minimo<1||minimo>4);
 			
 			switch(minimo){
 				
@@ -188,7 +189,7 @@ int main () {
 				
 				/* for (numeroFuentes=0; numeroFuentes<a; numeroFuentes++) {
 					if (numeroFuentes == 0) {
-						printf("El numero de fuentes debe ser 3 como máximo y al meno");
+						printf("El numero de fuentes debe ser 3 como máximo");
 					} else (numeroFuentes == 1); {
 						return numeroFuentes;
 					}
