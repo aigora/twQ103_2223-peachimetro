@@ -13,7 +13,7 @@ void ImprimirBanner () {
     printf("*        *        *******  *       *     *     *    *       * *          *    * ***    *     *   \n");
     printf("*        *******  *     *  ******* *     *  ******* *       * *******    *    *    **  *******   \n");
 	}
-    
+	
 typedef struct{
 	char parametros[300];	
 	float ph;
@@ -24,11 +24,14 @@ typedef struct{
 
 
 int main () {
-    	
+    int suma,contador,dato,archivo;
 	int estadisticas, media, maximo, minimo, nombreNuevoFichero, numeroFuentes, a, b, Eph, Econductividad, Ecoliformes, Eturbidez;
 	float media1, media2, media3, media4, maximo1, maximo2, maximo3, maximo4, minimo1, minimo2, minimo3, minimo4;
-	FILE *ph,*conductividad,*turbidez,*coliformes;
-
+	FILE*pH;
+	FILE*conductividad;
+	FILE*turbidez;
+	FILE*coliformes;
+	ImprimirBanner();
 	do{
     printf("Bienvenido a Peachimetro. Indique lo que desea realizar con el programa:\n1 - Calcular media\n2 - Calcular maximo\n3 - Calcular minimo\n4 - Guardar datos nuevos\n");
     scanf("%i", &estadisticas);
@@ -47,15 +50,34 @@ int main () {
 			switch(media){
 				
 				case 1:
-				ph = fopen("valores ph.txt", "r");
-				if (ph == NULL){
-                        printf("No se ha podido abrir el fichero.");
-                        exit(1);
-                    }
-					printf("pH (media) = %d", media1);
+				pH= fopen("valores pH.txt", "r");
+    
+                if (pH == NULL) {
+                printf("No se ha podido abrir el fichero.");
+                exit(1);
+    }
+    
+                suma = 0;
+                contador = 0;
+    
+                while (fscanf(pH, "%d", &dato) == 1) {
+                suma += dato;
+                contador++;
+    }
+    
+   
+    
+     if (contador != 0) {
+        double media1 = (double)suma / contador;
+        printf("La media es: %.2lf\n", media1);
+    } else {
+        printf("No hay datos para calcular la media.\n");
+    }
+    fclose(pH);
+    
 					break;
 				case 2:
-				conductividad = fopen("valores conductividad.txt", "r")
+				conductividad = fopen("valores conductividad.txt", "r");
 				if (conductividad == NULL){
                         printf("No se ha podido abrir el fichero.");
                         exit(1);
@@ -64,7 +86,7 @@ int main () {
 					printf("Conductividad (media) = %d", media2);
 					break;
 				case 3:
-				turbidez = fopen("valores turbidez.txt", "r")
+				turbidez = fopen("valores turbidez.txt", "r");
 				if (turbidez == NULL){
                         printf("No se ha podido abrir el fichero.");
                         exit(1);
@@ -72,7 +94,7 @@ int main () {
 					printf("Turbidez (media) = %d", media3);
 					break;
 				case 4:
-				coliformes = fopen("valores coliformes.txt", "r")
+				coliformes = fopen("valores coliformes.txt", "r");
 				if (coliformes == NULL){
                         printf("No se ha podido abrir el fichero.");
                         exit(1);
@@ -209,4 +231,3 @@ int main () {
 	}	
 		
 }
-
