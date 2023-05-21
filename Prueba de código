@@ -33,7 +33,7 @@ int main () {
 	FILE*coliformes;
 	ImprimirBanner();
 	do{
-    printf("Bienvenido a Peachimetro. Indique lo que desea realizar con el programa:\n1 - Calcular media\n2 - Calcular maximo\n3 - Calcular minimo\n4 - Guardar datos nuevos\n");
+    printf("Bienvenido a Peachimetro. Indique lo que desea realizar con el programa:\n1 - Calcular media\n2 - Calcular maximo\n3 - Calcular minimo\n4 - Abrir archivo\n");
     scanf("%i", &estadisticas);
     }while (estadisticas<1 || estadisticas>4);
 
